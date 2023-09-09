@@ -16,14 +16,15 @@ services:
     depends_on:
       - mysql
   mysql:
+    platform: linux/amd64
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: ****
-      MYSQL_USER: ****
-      MYSQL_PASSWORD: ****
-      MYSQL_ROOT_PASSWORD: ****
+      MYSQL_DATABASE: common
+      MYSQL_USER: yone
+      MYSQL_PASSWORD: yone
+      MYSQL_ROOT_PASSWORD: yone
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql-data:/var/lib/mysql
 volumes:
